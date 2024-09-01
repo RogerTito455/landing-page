@@ -1,0 +1,222 @@
+:root {
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+    --color-blue-dark: #162542; 
+    --color-grey: #E8EFF2;
+    --clr-orange-200: #F16718;
+    --clr-orange-100: #FF9B62;
+    --clr--blue-100: #5e729c;
+    --clr-white: #FFFFFF;
+    --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3)
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    font-weight: var(--font-weight-medium);
+    width: 60%;
+    max-width: 1200px;
+    min-width: 320px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.navbar .nav-button {
+    border: none;
+    color: var(--color-blue-dark);
+    font-weight: var(--font-weight-bold);
+    border-radius: 0.5rem;
+    padding: 1.2rem;
+    background-color: var(--color-grey);
+    cursor: pointer;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.navbar .nav-button:hover {
+    background-color: var(--color-blue-dark);
+    color: var(--color-grey);
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.left-container h1 {
+    margin-top: 9rem;
+    margin-bottom: 2rem;
+    color: var(--color-blue-dark);
+    font-weight: var(--font-weight-black);
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.left-container .content {
+    color: var(--clr--blue-100);
+    margin-bottom: 2rem;
+}
+
+.left-container .pre-order {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.left-container button {
+    border: none;
+    padding: 1.2rem;
+    background-color: var(--clr-orange-200);
+    color: var(--clr-white);
+    font-weight: var(--font-weight-bold);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out;
+}
+
+.left-container button:hover {
+    background-color: var(--clr-orange-100);
+}
+
+.right-container img {
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .left-container h1 {
+        margin-top: 5rem;
+        font-size: 2.5rem;
+    }
+
+    .container {
+        width: 90%;
+        padding: 0;
+    }
+}
+
+.second-container {
+    display: grid;
+    grid-template-columns: 75% 1fr;
+    width: 100%;
+    gap: 24px;
+    margin-bottom: 1rem;
+}
+
+.second-container .feature-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.second-container .feature-images picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.second-container .feature-images picture img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.second-container .feature-text {
+    margin-left: 5rem;
+    margin-top: 16rem;
+}
+
+.second-container .feature-text h1 {
+    color: var(--color-blue-dark);
+    font-weight: var(--font-weight-black);
+    line-height: 1.2;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.second-container .feature-text p {
+    color: var(--clr--blue-100);
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .second-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .second-container .feature-text {
+        margin: 0;
+    }
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea los iconos al inicio del contenedor */
+    margin-bottom: 5rem;
+    flex-wrap: wrap; /* Permite que los iconos se envuelvan en pantallas más pequeñas */
+}
+
+.baby {
+    margin-right: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.baby h2 {
+    color: var(--color-blue-dark);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.baby p {
+    color: var(--clr--blue-100);
+}
+
+.icons img {
+    background-color: var(--clr-orange-200);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+@media (min-width: 1440px) {
+    .icons{
+        flex-wrap: nowrap;
+    }
+}
